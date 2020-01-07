@@ -1,6 +1,6 @@
 const calculator = document.querySelector('.calculator')
 const keys = calculator.querySelector('.calc_keys')
-const display = document.querySelector('calc_display')
+const display = document.querySelector('.calc_display')
 const previousKeyType = calculator.dataset.previousKeyType
 
 keys.addEventListener('click', e=>{
@@ -51,13 +51,13 @@ keys.addEventListener('click', e=>{
         let result =''
 
         if (operator === 'add'){
-          result = n1+n2
+          result = parseFloat(n1)+parseFloat(n2)
         }else if (operator==='subtract'){
-          result = n1-n2
+          result = parseFloat(n1)-parseFloat(n2)
         }else if (operater ==='multiply'){
-          result = n1 * n2
+          result = parseFloat(n1) * parseFloat(n2)
         }else if (operator ==='divide'){
-          result = n1 /n2
+          result = parseFloat(n1) /parseFloat(n2)
         }
         return result
       }
